@@ -3,6 +3,7 @@
   <string name="splashview">SplashView</string>
   <string name="user_profile_kotlin">User Profile Kotlin</string>
   <string name="confirm">Confirm</string>
+  <string name="name">%1$s %2$s</string>
   <string name="Description">Description</string>
   <string name="FristName">FirstName</string>
   <string name="open_picture_gallery">OPEN PICTURE GALLERY</string>
