@@ -25,6 +25,7 @@ class ProfileActivity : AppCompatActivity() {
       if (profile.imageUri != null) ivProfilePic2.setImageURI(profile.imageUri)
     }
   }
+
   override fun onOptionsItemSelected(item: MenuItem?): Boolean {
     return when (item?.itemId) {
       android.R.id.home -> {
@@ -35,7 +36,7 @@ class ProfileActivity : AppCompatActivity() {
     }
   }
 
-  companion object{
+  companion object {
     const val PROFILE_EXTRA = "PROFILE_EXTRA"
   }
 

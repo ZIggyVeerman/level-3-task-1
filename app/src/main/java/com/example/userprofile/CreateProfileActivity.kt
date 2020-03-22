@@ -17,11 +17,14 @@ class CreateProfileActivity : AppCompatActivity() {
     initViews()
   }
 
+  /**
+   * Initializes the Ui of the application
+   */
   private fun initViews() {
     btOpenPic.setOnClickListener { onGalleryClick() }
     btConfirm.setOnClickListener { onConfirmClick() }
   }
-
+  
   private fun onGalleryClick() {
     // Create an Intent with action as ACTION_PICK
     val galleryIntent = Intent(Intent.ACTION_PICK)
@@ -32,6 +35,7 @@ class CreateProfileActivity : AppCompatActivity() {
     // Start the activity using the gallery intent
     startActivityForResult(galleryIntent, GALLERY_REQUEST_CODE)
   }
+
   private var profileImageUri: Uri? = null
 
   override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -45,6 +49,7 @@ class CreateProfileActivity : AppCompatActivity() {
       }
     }
   }
+
   private fun onConfirmClick() {
     val profile = Profile(
       etFirstName.text.toString(),
@@ -57,7 +62,6 @@ class CreateProfileActivity : AppCompatActivity() {
     profileActivityIntent.putExtra(ProfileActivity.PROFILE_EXTRA, profile)
     startActivity(profileActivityIntent)
   }
-
 
 
 }
